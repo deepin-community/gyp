@@ -1,3 +1,9 @@
+gyp (0.1+20210831gitd6c5dd5-2) unstable; urgency=medium
+
+  * fix colletcions error
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 06 Jan 2023 16:26:36 +0800
+
 gyp (0.1+20210831gitd6c5dd5-1) unstable; urgency=medium
 
   * Team upload

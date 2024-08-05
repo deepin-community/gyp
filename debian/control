@@ -1,21 +1,38 @@
 Source: gyp
 Section: devel
 Priority: optional
-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Jérémy Lal <kapouer@melix.org>
-Build-Depends: debhelper-compat (= 13),
- python3-all, python3-setuptools, dh-python,
- asciidoc, xsltproc, docbook-xsl, docbook-xml
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders:
+ Jérémy Lal <kapouer@melix.org>,
+ Joseph Nahmias <jello@debian.org>,
+Build-Depends: debhelper-compat (= 13)
+ , python3-all
+ , python3-setuptools
+ , dh-sequence-python3
+ , pybuild-plugin-pyproject
+ , python3-pytest
+ , python3-packaging
+ , asciidoc <!nodoc>
+ , xsltproc
+ , docbook-xsl <!nodoc>
+ , docbook-xml <!nodoc>
+ , ninja-build <!nocheck>
+ , python3-distro <!nocheck>
 Standards-Version: 4.6.0
-Homepage: https://chromium.googlesource.com/external/gyp/
-Vcs-Browser: https://salsa.debian.org/debian/gyp
-Vcs-Git: https://salsa.debian.org/debian/gyp.git
+Homepage: https://github.com/nodejs/gyp-next/
+Vcs-Browser: https://salsa.debian.org/python-team/packages/gyp
+Vcs-Git: https://salsa.debian.org/python-team/packages/gyp.git
 Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-pybuild
 
 Package: gyp
 Architecture: all
 Multi-Arch: foreign
-Depends: ${python3:Depends}, ${misc:Depends}, python3-pkg-resources
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+ python3-pkg-resources,
+ python3-packaging,
 Description: Cross-platform build script generator
  GYP (Generate Your Projects) is a tool to generate native Visual Studio,
  Xcode, SCons and make build files from a description of a project in a

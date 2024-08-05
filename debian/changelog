@@ -1,8 +1,94 @@
+gyp (0.16.2-1) unstable; urgency=medium
+
+  * New upstream version 0.16.2
+  * Testsuite: autopkgtest-pkg-pybuild
+  * copyright for local copy of packaging
+  * No lintian-overrides needed
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 08 Mar 2024 13:08:04 +0100
+
+gyp (0.16.1-2) experimental; urgency=medium
+
+  * Team Upload.
+  * add a runtime dependency on python3-packaging
+
+ -- Alexandre Detiste <tchet@debian.org>  Sat, 20 Jan 2024 13:37:48 +0100
+
+gyp (0.16.1-1) experimental; urgency=medium
+
+  * Team Upload.
+  * switch to active fork gyp-next (Closes: #1000959, #994837)
+  * New upstream version 0.16.1
+  * modernize build
+  * remove obsolete dependency on python3-six
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 03 Jan 2024 00:51:50 +0100
+
+gyp (0.1+20220404git9ecf45e-2) unstable; urgency=medium
+
+  * Depends: python3-six
+  * Patch: fix TypeError: NoneType is not subscriptable
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 16 Jul 2022 14:04:27 +0200
+
+gyp (0.1+20220404git9ecf45e-1) unstable; urgency=medium
+
+  * New upstream version 0.1+20220404git9ecf45e
+  * Build-, Test-Depends python3-six
+  * Support DEB_BUILD_OPTIONS nodoc, nocheck
+  * B-D <!nodoc> profiles
+  * Fix test failures: extra LDFLAGS to silence execstack warnings
+    (Closes: #1013541)
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 07 Jul 2022 20:19:17 +0200
+
+gyp (0.1+20210831gitd6c5dd5-5) unstable; urgency=medium
+
+  * [016826e] fix asm test for s390x
+
+ -- Joseph Nahmias <jello@debian.org>  Tue, 22 Feb 2022 09:23:00 -0500
+
+gyp (0.1+20210831gitd6c5dd5-4) unstable; urgency=medium
+
+  * [a47d676] fix asm test for armhf/thumb
+
+ -- Joseph Nahmias <jello@debian.org>  Fri, 11 Feb 2022 11:20:01 -0500
+
+gyp (0.1+20210831gitd6c5dd5-3) unstable; urgency=medium
+
+  * [c4e3808] fix test asm compile on non-x86 archs
+
+ -- Joseph Nahmias <jello@debian.org>  Thu, 10 Feb 2022 01:23:34 -0500
+
 gyp (0.1+20210831gitd6c5dd5-2) unstable; urgency=medium
 
-  * fix colletcions error
+  * Team upload
 
- -- Deepin Packages Builder <packages@deepin.org>  Fri, 06 Jan 2023 16:26:36 +0800
+  [ lintian-brush ]
+  * Set field Upstream-Name in debian/copyright.
+
+  [ Joe Nahmias ]
+  * [4465e75] run upstream testsuite during build
+  * [24798dd] fixes for python3.9 (Closes: #1002190)
+  * [5c3bb15] fix rpath tests
+  * [f8ea29c] fix cycle test
+  * [f15bce0] remove non-deterministic tests
+  * [ad0454b] ensure testsuite can clean up after itself
+  * [e78f13f] run upstream testsuite as autopkgtest
+  * [b55a633] disable unneeded salsa-ci jobs
+  * [e7f8daf] add myself to uploaders
+  * [0c8674e] change maintenance to DPT from JST.
+    As discussed in #969081, this package should really live within the
+    Debian Python Team (DPT). As a member of both the Debian JavaScript Team
+    and the DPT, I agree and hereby formally transfer maintainership to DPT.
+    (Closes: #969081)
+  * [a60b2d4] also run make format tests during build
+  * [a5d7420] fix output check for make tests when running in submake
+  * [b2f1bac] upstream autopkgtest needs C & C++ compilers
+  * [8ebd0ec] have autopkgtest use installed gyp command
+  * [07f438a] update Vcs URLs to point to DPT
+
+ -- Joseph Nahmias <jello@debian.org>  Sun, 06 Feb 2022 23:15:06 -0500
 
 gyp (0.1+20210831gitd6c5dd5-1) unstable; urgency=medium
 
@@ -124,7 +210,7 @@ gyp (0.1~svn1625-1) experimental; urgency=low
   * Copyright: convert to 1.0 format, extend copyright years.
   * Update short and long description. (Thanks to Jonathan Nieder).
   * Add a gyp(1) man page. (Closes: #585825, thanks to Jonathan Nieder),
-    Build-Depends on asciidoc, xsltproc, docbook-xsl, docbook-xml.
+    Build-Depends on asciidoc, docbook-xsl, docbook-xml.
   * Patch make generator to append CPPFLAGS to CXXFLAGS. (Closes: #689754).
   * Migrate to dh_python2. Build-Depends python (>= 2.6.6-3~).
 

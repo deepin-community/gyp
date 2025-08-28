@@ -1,0 +1,15 @@
+Forward: TODO
+
+--- a/pylib/gyp/__init__.py
++++ b/pylib/gyp/__init__.py
+@@ -476,8 +476,8 @@
+ 
+     options, build_files_arg = parser.parse_args(args)
+     if options.version:
+-        import pkg_resources
+-        print(f"v{pkg_resources.get_distribution('gyp-next').version}")
++        import importlib.metadata
++        print(f"v{importlib.metadata.version('gyp-next')}")
+         return 0
+     build_files = build_files_arg
+ 

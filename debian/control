@@ -31,7 +31,6 @@ Multi-Arch: foreign
 Depends:
  ${python3:Depends},
  ${misc:Depends},
- python3-pkg-resources,
  python3-packaging,
 Description: Cross-platform build script generator
  GYP (Generate Your Projects) is a tool to generate native Visual Studio,

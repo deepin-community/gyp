@@ -1,3 +1,10 @@
+gyp (0.16.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Patch-out usage of pkg_resources (Closes: #1083430)
+
+ -- Alexandre Detiste <tchet@debian.org>  Sun, 26 Jan 2025 20:58:30 +0100
+
 gyp (0.16.2-1) unstable; urgency=medium
 
   * New upstream version 0.16.2
